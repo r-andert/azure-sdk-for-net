@@ -59,9 +59,9 @@ namespace Microsoft.Azure.Batch
         private bool _disposed;  // used for dispose pattern
         private readonly object _closeLocker = new object();
 
-#region // constructors
+        #region // constructors
 
-        private BatchClient()
+        protected BatchClient()
         {
             _disposableStateBox = new BatchClientDisposableStateBox(this);
 
